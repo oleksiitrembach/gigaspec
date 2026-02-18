@@ -106,7 +106,12 @@ my-project/
 
 ## 🤖 For AI Assistants
 
-Gigaspec is built for AI-native workflows. All commands support `--json` for structured output:
+Gigaspec works both as a **CLI tool** (for humans) and an **MCP server** (for AI IDEs). Use whichever fits your workflow:
+
+- **CLI**: Run `gigaspec` commands directly in terminal
+- **MCP**: AI assistants use tools via MCP integration
+
+All CLI commands support `--json` for structured output:
 
 ```bash
 # Start AI workflow
@@ -170,7 +175,9 @@ Then configure your AI IDE:
 }
 ```
 
-**Option 3: Local Development (Full Path)**
+**Option 3: Local Development (Project Path)**
+
+When developing gigaspec itself or using a local copy:
 
 ```json
 {
@@ -178,7 +185,7 @@ Then configure your AI IDE:
     "gigaspec": {
       "command": "node",
       "args": [
-        "C:/Users/YOURNAME/Documents/Other/gigaspec/bin/mcp-server.js"
+        "./bin/mcp-server.js"
       ],
       "env": {}
     }
