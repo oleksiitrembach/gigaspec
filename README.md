@@ -48,6 +48,11 @@ AI: "Tell me more! What's your expected user count? Do you need
 
 | Feature | Description |
 |---------|-------------|
+| 🚀 **Gigaspec v5.0** | Ultimate spec kit with **forced AI compliance** |
+| 🔒 **Immutable Rules** | CLAUDE.md enforces standards that AI cannot override |
+| ✅ **Automated Verification** | Every code change validated before completion |
+| 🛠️ **Universal Tool Support** | Claude Code, Cursor, Kimi adapters |
+| 🌍 **Model-Agnostic** | Works with Claude, GPT, Gemini, Llama |
 | 🤖 **AI-Native Workflow** | Designed for AI assistants to drive development |
 | 💬 **Intelligent Q&A** | AI asks clarifying questions, not keyword matching |
 | 📋 **Living Documentation** | STATE.md tracks progress, AGENT.md guides AI coding |
@@ -80,9 +85,49 @@ gigaspec init --name "MyApp" --stack "Node.js/Next.js"
 
 # Non-interactive with defaults
 gigaspec init --name "MyApp" --yes
+
+# Generate v5.0 Ultimate Spec Kit (RECOMMENDED)
+gigaspec generate --name "MyApp" --stack "Node.js/Express" --v5
 ```
 
-### What Gets Created
+### 🚀 Gigaspec v5.0 (Ultimate Spec Kit)
+
+**The specification framework that forces AI compliance.**
+
+```bash
+# Generate v5.0 spec kit with immutable rules
+gigaspec generate --name "MyApp" --stack "Node.js/Express" --v5
+```
+
+**What makes v5.0 different:**
+- **CLAUDE.md** - Immutable system rules that AI **cannot** override
+- **Automated Verification** - Every code change validated
+- **Multi-Tool Adapters** - Claude Code, Cursor, Kimi support
+- **Model-Agnostic** - Works with any LLM
+
+**Generated v5.0 Structure:**
+```
+my-project/
+├── CLAUDE.md          ← IMMUTABLE system rules (AI cannot override)
+├── AGENT.md           ← Project-specific standards
+├── STATE.md           ← Living project status
+├── ARCHITECTURE.md    ← System design
+├── PLAN.md            ← Development roadmap
+├── RULES/             ← Modular rule modules
+│   ├── security.md
+│   └── testing.md
+├── .claude/           ← Claude Code adapter
+│   ├── CLAUDE.md
+│   ├── skills/
+│   └── agents/
+├── .cursorrules       ← Cursor IDE adapter
+├── .cursor/
+│   └── agents/
+└── .kimi/             ← Kimi CLI adapter
+    └── AGENT.md
+```
+
+### What Gets Created (v4.x)
 
 ```
 my-project/

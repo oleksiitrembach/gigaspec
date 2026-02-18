@@ -1,6 +1,6 @@
 # DEPLOYMENT.md - Production Deployment
 
-> **Project**: Gigaspec  
+> **Project**: MyProject  
 > **Platform**: Railway  
 
 ---

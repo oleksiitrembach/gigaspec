@@ -1,6 +1,6 @@
 # WORKFLOW.md - AI Development Protocol
 
-> **Project**: Gigaspec  
+> **Project**: MyProject  
 > **Stack**: Node.js/Express  
 
 ---

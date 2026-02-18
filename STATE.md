@@ -1,31 +1,30 @@
-# STATE.md - Current Project State
+# STATE.md - Gigaspec Project State
 
 > **Project**: Gigaspec  
 > **Last Updated**: 2026-02-18  
-> **Current Phase**: Released  
-> **Overall Progress**: 100%  
+> **Current Phase**: Active Development  
+> **Overall Progress**: 85%  
 
 ---
 
 ## ✅ Completed
 
-- [x] Core framework implementation (lib/framework.js)
-- [x] AI workflow engine (lib/ai-workflow.js)
-- [x] MCP server for AI IDE integration (bin/mcp-server.js)
-- [x] CLI tool with all commands (bin/gigaspec.js)
-- [x] Template system for all tech stacks (lib/templates.js)
-- [x] Test suite with 13 passing tests
-- [x] Documentation (README, EXAMPLE, IMPLEMENTATION_SUMMARY)
-- [x] GitHub repository setup
-- [x] Apache 2.0 license
-- [x] v4.0.0 release tagged
-- [x] CI/CD with GitHub Actions
+- [x] Core CLI implementation (`bin/gigaspec.js`)
+- [x] MCP server (`bin/mcp-server.js`)
+- [x] Framework library (`lib/framework.js`)
+- [x] Template system (`lib/templates.js`)
+- [x] NPM package configuration
+- [x] Test suite setup
+- [x] Documentation (README, examples)
+- [x] **Self-improvement specification kit created** (`spec-improvement/`)
 
 ---
 
 ## 🔄 In Progress
 
-- [ ] NPM package publication (pending account setup)
+- [ ] Test coverage improvement (target: 95%)
+- [ ] Template validation system
+- [ ] AI provider integration design
 
 ---
 
@@ -37,17 +36,30 @@
 
 ## 📋 Next Priority
 
-1. Create npm account and publish package
-2. Add GitHub Topics (ai, cli, specification, framework, developer-tools)
-3. Spread the word!
+### Immediate
+1. Review current test coverage with `npm run test:coverage`
+2. Add missing tests for edge cases
+3. Document MCP tool response schemas
+
+### Short Term (see [spec-improvement/STATE.md](spec-improvement/STATE.md))
+4. Implement `.gigaspec.json` config support
+5. Add template JSON Schema validation
+6. Design AI provider abstraction layer
 
 ---
 
 ## 📝 Recent Decisions
 
-| Date | Decision |
-|------|----------|
-| 2026-02-18 | Changed license from MIT to Apache 2.0 |
-| 2026-02-18 | Fixed shell script permissions for CI/CD |
-| 2026-02-18 | Released v4.0.0 |
-| 2026-02-18 | Published to GitHub |
+| Date | Decision | Context |
+|------|----------|---------|
+| 2026-02-18 | Created self-improvement kit | spec-improvement/ directory with full spec |
+| 2026-02-18 | Plan v5.0 roadmap | AI integration, visualization, collaboration |
+| 2026-02-18 | Maintain 95% coverage | Quality standard for framework code |
+
+---
+
+## 🔗 Quick Links
+
+- [Self-Improvement Kit](./spec-improvement/README.md) - Blueprint for v5.0
+- [Improvement Proposals](./spec-improvement/IMPROVEMENTS.md) - Feature ideas
+- [Architecture](./spec-improvement/ARCHITECTURE.md) - System design

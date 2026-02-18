@@ -1,6 +1,6 @@
 # SETUP.md - Local Development Guide
 
-> **Project**: Gigaspec  
+> **Project**: MyProject  
 > **Stack**: Node.js/Express  
 
 ---

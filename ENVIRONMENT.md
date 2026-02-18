@@ -1,6 +1,6 @@
 # ENVIRONMENT.md - Secrets & Configuration
 
-> **Project**: Gigaspec  
+> **Project**: MyProject  
 
 ---
 

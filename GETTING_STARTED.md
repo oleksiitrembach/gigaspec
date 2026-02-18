@@ -1,4 +1,4 @@
-# Getting Started with Gigaspec
+# Getting Started with MyProject
 
 Welcome! This guide walks you through using Gigaspec to build your project with AI collaboration.
 
@@ -9,7 +9,7 @@ Welcome! This guide walks you through using Gigaspec to build your project with 
 After running `gigaspec init`, you have:
 
 ```
-Gigaspec/
+MyProject/
 ├── AGENT.md          ← The "rulebook" for AI assistants
 ├── STATE.md          ← Your project's current status & todo list
 ├── SETUP.md          ← How to set up your development environment

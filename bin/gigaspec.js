@@ -442,6 +442,7 @@ program
   .option('-n, --name <name>', 'Project name')
   .option('-s, --stack <stack>', 'Tech stack')
   .option('-o, --output <dir>', 'Output directory', '.')
+  .option('--v5', 'Use Gigaspec v5.0 (ultimate spec kit with forced compliance)')
   .option('-j, --json', 'Output JSON for AI consumption')
   .action(async (options) => {
     try {

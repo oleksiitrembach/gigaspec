@@ -1,6 +1,6 @@
 # PLAN.md - Development Roadmap
 
-> **Project**: Gigaspec  
+> **Project**: MyProject  
 > **Duration**: 12 weeks  
 > **Stack**: Node.js/Express  
 

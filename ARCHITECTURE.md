@@ -1,6 +1,6 @@
 # ARCHITECTURE.md - System Design
 
-> **Project**: Gigaspec  
+> **Project**: MyProject  
 > **Stack**: Node.js/Express  
 > **Last Updated**: 2026-02-18  
 
@@ -8,7 +8,7 @@
 
 ## 📋 Overview
 
-Gigaspec is built with Node.js/Express, using PostgreSQL for data storage and Redis for caching.
+MyProject is built with Node.js/Express, using PostgreSQL for data storage and Redis for caching.
 
 ---
 

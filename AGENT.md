@@ -1,6 +1,6 @@
 # AGENT.md - AI Coding Standards & Constraints
 
-> **Project**: Gigaspec  
+> **Project**: MyProject  
 > **Stack**: Node.js/Express  
 > **Last Updated**: 2026-02-18  
 

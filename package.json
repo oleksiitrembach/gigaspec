@@ -1,6 +1,6 @@
 {
   "name": "gigaspec",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "AI collaboration framework for software specification",
   "main": "lib/framework.js",
   "bin": {
