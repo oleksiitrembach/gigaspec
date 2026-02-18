@@ -28,6 +28,21 @@
   ],
   "author": "Gigaspec Team",
   "license": "Apache-2.0",
+  "files": [
+    "bin/",
+    "lib/",
+    "logo.png",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oleksiitrembach/gigaspec.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oleksiitrembach/gigaspec/issues"
+  },
+  "homepage": "https://github.com/oleksiitrembach/gigaspec#readme",
   "engines": {
     "node": ">=16.0.0"
   },

@@ -1,55 +1,124 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
   <defs>
-    <!-- Gradient for main shape -->
-    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+    <!-- Chad gold/white gradient -->
+    <linearGradient id="chadGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#FFF8DC;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
     </linearGradient>
     
-    <!-- Gradient for inner glow -->
-    <radialGradient id="innerGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" />
-      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
-    </radialGradient>
+    <!-- Metallic shine -->
+    <linearGradient id="metallic" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#FFFFFF;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.2" />
+    </linearGradient>
     
-    <!-- Drop shadow filter -->
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#667eea" flood-opacity="0.4"/>
+    <!-- Strong shadow -->
+    <filter id="chadShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.5"/>
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Jawline glow -->
+    <filter id="jawGlow">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
   </defs>
   
-  <!-- Background circle with gradient -->
-  <circle cx="100" cy="100" r="90" fill="url(#mainGradient)" filter="url(#shadow)"/>
+  <!-- Black background circle (chad vibe) -->
+  <circle cx="100" cy="100" r="95" fill="#0D0D0D" filter="url(#chadShadow)"/>
   
-  <!-- Inner glow overlay -->
-  <circle cx="100" cy="100" r="85" fill="url(#innerGlow)"/>
+  <!-- Gold border ring -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="url(#chadGradient)" stroke-width="4"/>
   
-  <!-- G letter stylized as code brackets -->
-  <g fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Left bracket curved -->
-    <path d="M75 55 Q55 55 55 75 L55 125 Q55 145 75 145" />
+  <!-- Inner metallic background -->
+  <circle cx="100" cy="100" r="86" fill="#1A1A1A"/>
+  
+  <!-- Chad face silhouette -->
+  <g transform="translate(100, 100)">
+    <!-- Jawline (strong chad jaw) -->
+    <path d="M-35 -50 
+             Q-45 -30 -45 0 
+             Q-45 35 -25 50 
+             L0 58 
+             L25 50 
+             Q45 35 45 0 
+             Q45 -30 35 -50 
+             Q0 -60 -35 -50 Z" 
+          fill="#E8E8E8" stroke="#FFD700" stroke-width="2" filter="url(#jawGlow)"/>
     
-    <!-- Right bracket (dot for spec) -->
-    <circle cx="135" cy="100" r="8" fill="#ffffff" stroke="none"/>
+    <!-- Hair (chad haircut) -->
+    <path d="M-40 -45 
+             Q-50 -70 0 -75 
+             Q50 -70 40 -45 
+             Q35 -55 0 -60 
+             Q-35 -55 -40 -45" 
+          fill="#0D0D0D"/>
     
-    <!-- Connecting line representing spec -->
-    <path d="M75 100 L115 100" stroke-width="6" opacity="0.8"/>
+    <!-- Sunglasses (chad essential) -->
+    <g fill="#0D0D0D" stroke="#FFD700" stroke-width="2">
+      <!-- Left lens -->
+      <path d="M-32 -15 Q-32 -5 -20 -5 Q-8 -5 -8 -15 Q-8 -25 -20 -25 Q-32 -25 -32 -15"/>
+      <!-- Right lens -->
+      <path d="M8 -15 Q8 -25 20 -25 Q32 -25 32 -15 Q32 -5 20 -5 Q8 -5 8 -15"/>
+      <!-- Bridge -->
+      <line x1="-8" y1="-15" x2="8" y2="-15" stroke-width="3"/>
+      <!-- Reflection on glasses -->
+      <path d="M-28 -20 Q-25 -18 -22 -20" stroke="#FFFFFF" stroke-width="1.5" opacity="0.8"/>
+      <path d="M12 -20 Q15 -18 18 -20" stroke="#FFFFFF" stroke-width="1.5" opacity="0.8"/>
+    </g>
+    
+    <!-- Strong chin shadow -->
+    <path d="M-20 45 Q0 55 20 45" fill="none" stroke="#B8860B" stroke-width="2" opacity="0.5"/>
+    
+    <!-- G letter in the forehead (representing Gigaspec) -->
+    <text x="0" y="-35" 
+          font-family="Arial Black, sans-serif" 
+          font-size="20" 
+          font-weight="900"
+          fill="#FFD700" 
+          text-anchor="middle"
+          style="text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">G</text>
   </g>
   
-  <!-- Circuit/AI dots around -->
-  <g fill="#ffffff" opacity="0.6">
-    <circle cx="100" cy="30" r="3"/>
-    <circle cx="100" cy="170" r="3"/>
-    <circle cx="30" cy="100" r="3"/>
-    <circle cx="170" cy="100" r="3"/>
+  <!-- Golden accents around -->
+  <g fill="#FFD700" opacity="0.8">
+    <!-- Top crown rays -->
+    <polygon points="100,8 102,15 100,18 98,15" />
+    <polygon points="85,12 88,18 85,20 82,18" />
+    <polygon points="115,12 118,18 115,20 112,18" />
   </g>
   
-  <!-- Connection lines for AI feel -->
-  <g stroke="#ffffff" stroke-width="1.5" opacity="0.3" fill="none">
-    <path d="M100 30 L100 55"/>
-    <path d="M100 145 L100 170"/>
-    <path d="M30 100 L55 100"/>
-    <path d="M145 100 L170 100"/>
+  <!-- Spec/AI dots (circuit vibe) -->
+  <g fill="#FFD700" opacity="0.6">
+    <circle cx="100" cy="25" r="2"/>
+    <circle cx="100" cy="175" r="2"/>
+    <circle cx="25" cy="100" r="2"/>
+    <circle cx="175" cy="100" r="2"/>
   </g>
+  
+  <!-- Connection lines -->
+  <g stroke="#FFD700" stroke-width="1" opacity="0.3" fill="none">
+    <path d="M100 25 L100 35"/>
+    <path d="M100 165 L100 175"/>
+    <path d="M25 100 L35 100"/>
+    <path d="M165 100 L175 100"/>
+  </g>
+  
+  <!-- Metallic shine overlay -->
+  <circle cx="100" cy="100" r="86" fill="url(#metallic)" opacity="0.3" pointer-events="none"/>
 </svg>
