@@ -6,7 +6,7 @@
 
 ### **AI-Native Specification Framework**
 
-[![Version](https://img.shields.io/badge/version-4.0.0-blue.svg)](https://github.com/oleksiitrembach/gigaspec)
+[![npm](https://img.shields.io/npm/v/gigaspec.svg)](https://www.npmjs.com/package/gigaspec)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D16.0.0-brightgreen.svg)](https://nodejs.org/)
 [![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)]()
