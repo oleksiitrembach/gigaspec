@@ -42,7 +42,8 @@ const InitInputSchema = z.object({
   deploy: z.string().optional().describe('Deployment platform'),
   services: z.string().optional().describe('External services (comma-separated)'),
   output: z.string().optional().describe('Output directory'),
-  yes: z.boolean().optional().describe('Use defaults (non-interactive)')
+  yes: z.boolean().optional().describe('Use defaults (non-interactive)'),
+  v5: z.boolean().optional().describe('Use Gigaspec v5.0 Ultimate Workflow')
 });
 
 const AnalyzeInputSchema = z.object({
@@ -127,6 +128,23 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
   try {
     switch (name) {
       case 'gigaspec-init': {
+        // v5 workflow: Start AI interview
+        if (args.v5) {
+          const { AIWorkflowEngine } = require('../lib/ai-workflow');
+          const engine = new AIWorkflowEngine({ outputDir: args.output || '.', v5: true });
+          
+          const result = await engine.startV5Workflow();
+          
+          return {
+            content: [
+              {
+                type: 'text',
+                text: JSON.stringify(result, null, 2)
+              }
+            ]
+          };
+        }
+        
         const framework = new GigaspecFramework({ 
           outputDir: args.output || '.',
           jsonMode: true 

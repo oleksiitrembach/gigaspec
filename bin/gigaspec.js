@@ -50,9 +50,36 @@ program
   .option('-s, --stack <stack>', 'Tech stack (skip AI recommendation)')
   .option('-p, --path <path>', 'Path to existing project', '.')
   .option('-y, --yes', 'Use defaults (skip AI workflow)')
+  .option('--v5', 'Use Gigaspec v5.0 Ultimate Workflow (RECOMMENDED)')
   .option('-j, --json', 'Output JSON for AI consumption')
   .action(async (options) => {
     try {
+      // v5 mode: Ultimate workflow
+      if (options.v5) {
+        const engine = new AIWorkflowEngine({ outputDir: options.path, v5: true });
+        
+        if (options.json || isAIContext) {
+          const result = await engine.startV5Workflow();
+          console.log(JSON.stringify(result, null, 2));
+          return;
+        }
+        
+        // Human-friendly v5 intro
+        brand.title();
+        brand.header('🚀 Gigaspec v5.0 - Ultimate Spec Kit');
+        brand.divider();
+        console.log(chalk.cyan('\nWelcome! I\'ll help you create a complete specification'));
+        console.log(chalk.cyan('for your project with forced AI compliance.\n'));
+        console.log(chalk.gray('What we\'ll do:'));
+        console.log('  1. Ask 8 quick questions about your project');
+        console.log('  2. AI recommends the best tech stack');
+        console.log('  3. Generate v5.0 spec kit with immutable rules\n');
+        
+        // Continue with original init for now
+        await initCommand(options, brand);
+        return;
+      }
+      
       const engine = new AIWorkflowEngine({ outputDir: options.path });
       
       // AI mode: output JSON
