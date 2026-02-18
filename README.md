@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="logo.svg" alt="Gigaspec Logo" width="120" height="120">
+
 # 🚀 Gigaspec
 
 ### **AI-Native Specification Framework**

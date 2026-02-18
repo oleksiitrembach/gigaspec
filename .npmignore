@@ -1,0 +1,38 @@
+# Don't publish to NPM
+.github/
+.hooks/
+scripts/
+test/
+.ai-temp/
+*.test.js
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage
+coverage/
+.nyc_output
+*.lcov
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Temp files
+temp/
+tmp/
+.cache/
+
+# Build outputs
+dist/
+build/
+_build/
+*.tsbuildinfo
