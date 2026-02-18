@@ -49,13 +49,13 @@ program
   .option('-d, --description <desc>', 'Project description')
   .option('-s, --stack <stack>', 'Tech stack (skip AI recommendation)')
   .option('-p, --path <path>', 'Path to existing project', '.')
-  .option('-y, --yes', 'Use defaults (skip AI workflow)')
-  .option('--v5', 'Use Gigaspec v5.0 Ultimate Workflow (RECOMMENDED)')
+  .option('-y, '--yes', 'Use defaults (skip AI workflow)')
+  .option('--legacy', 'Use legacy v4 workflow (not recommended)')
   .option('-j, --json', 'Output JSON for AI consumption')
   .action(async (options) => {
     try {
-      // v5 mode: Ultimate workflow
-      if (options.v5) {
+      // Default: v5 Ultimate workflow (recommended)
+      if (!options.legacy) {
         const engine = new AIWorkflowEngine({ outputDir: options.path, v5: true });
         
         if (options.json || isAIContext) {
@@ -75,11 +75,12 @@ program
         console.log('  2. AI recommends the best tech stack');
         console.log('  3. Generate v5.0 spec kit with immutable rules\n');
         
-        // Continue with original init for now
-        await initCommand(options, brand);
+        // Continue with interview workflow
+        await initCommand({ ...options, v5: true }, brand);
         return;
       }
       
+      // Legacy v4 mode
       const engine = new AIWorkflowEngine({ outputDir: options.path });
       
       // AI mode: output JSON
