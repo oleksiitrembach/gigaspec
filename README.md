@@ -121,16 +121,79 @@ gigaspec verify --json
 
 ### MCP Integration
 
+Gigaspec includes an MCP (Model Context Protocol) server for AI IDEs like Kimi, Claude Desktop, and Cline.
+
+#### Configuration
+
+Add to your AI IDE's MCP settings:
+
+**Option 1: Global Install (Recommended)**
+
 ```bash
-# Start MCP server for AI IDE integration
-gigaspec-mcp
+npm install -g gigaspec
 ```
 
-Available tools:
+Then configure your AI IDE:
+
+**Kimi Desktop** (`~/.kimi/mcp.json`):
+```json
+{
+  "mcpServers": {
+    "gigaspec": {
+      "command": "gigaspec-mcp"
+    }
+  }
+}
+```
+
+**Claude Desktop** (`%APPDATA%/Claude/claude_desktop_config.json` on Windows):
+```json
+{
+  "mcpServers": {
+    "gigaspec": {
+      "command": "gigaspec-mcp"
+    }
+  }
+}
+```
+
+**Option 2: Using npx (No Install)**
+
+```json
+{
+  "mcpServers": {
+    "gigaspec": {
+      "command": "npx",
+      "args": ["-y", "gigaspec-mcp"]
+    }
+  }
+}
+```
+
+**Option 3: Local Development (Full Path)**
+
+```json
+{
+  "mcpServers": {
+    "gigaspec": {
+      "command": "node",
+      "args": [
+        "C:/Users/YOURNAME/Documents/Other/gigaspec/bin/mcp-server.js"
+      ],
+      "env": {}
+    }
+  }
+}
+```
+
+#### Available Tools
+
+Once configured, your AI assistant can use:
 - `gigaspec-init` — Initialize project
 - `gigaspec-analyze` — Create analysis prompt
 - `gigaspec-generate` — Generate specification files
 - `gigaspec-status` — Get project status
+- `gigaspec-wizard` — Interactive project setup
 
 ---
 
