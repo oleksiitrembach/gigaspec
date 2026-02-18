@@ -1,0 +1,46 @@
+{
+  "name": "gigaspec",
+  "version": "4.0.0",
+  "description": "AI collaboration framework for software specification",
+  "main": "lib/framework.js",
+  "bin": {
+    "gigaspec": "bin/gigaspec.js",
+    "gigaspec-mcp": "bin/mcp-server.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "mcp": {
+    "name": "gigaspec",
+    "description": "AI collaboration framework for software specification",
+    "entrypoint": "bin/mcp-server.js"
+  },
+  "keywords": [
+    "specification",
+    "ai",
+    "llm",
+    "claude",
+    "framework",
+    "collaboration",
+    "gigaspec"
+  ],
+  "author": "Gigaspec Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "chalk": "^4.1.2",
+    "commander": "^11.0.0",
+    "fs-extra": "^11.1.1",
+    "inquirer": "^9.3.8",
+    "zod": "^4.3.6",
+    "zod-to-json-schema": "^3.25.1"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}

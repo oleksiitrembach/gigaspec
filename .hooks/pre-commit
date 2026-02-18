@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "🔍 Running checks..."
+if [ -f "scripts/validate-state.sh" ]; then
+  ./scripts/validate-state.sh
+fi
+echo "✅ Checks passed"

@@ -1,0 +1,12 @@
+# Gigaspec - Cursor Rules
+## ALWAYS
+1. Read STATE.md first
+2. Check AGENT.md constraints
+3. Max 10 lines per function
+## NEVER
+1. Skip verification
+2. Update STATE.md without CONFIRMED
+## COMMANDS
+- "Familiarize yourself" - Read all docs
+- "CONTINUE" - Next task from STATE.md
+- "STATUS" - Current state
